@@ -1,0 +1,61 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    background-color: #eee;
+  }
+
+.Scoreboard{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.scoreMsg{
+    display: flex;
+    margin: auto;
+    margin-top: 0;
+}
+
+.scoreBox {
+    display: flex;
+    margin: auto;
+    gap: 100px;
+    font-size: 80px;
+    margin-bottom: 0;
+}
+.playerSelection{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+    gap: 30px;
+}
+
+button {
+    width: 100px;
+    height: 80px;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 50px;
+    border: none;
+    background-color: white;
+}
+
+button:hover {
+    font-size: 80px;
+}

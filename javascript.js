@@ -37,9 +37,33 @@ function getRandomChoice() {
     }
 }
 
-computerSelection = getRandomChoice()
-playerSelection = 'ROCK'
-playRound(playerSelection,computerSelection)
+const computerSelection = getRandomChoice()
+const rockBtn = document.getElementById('ROCK')
+const paperBtn = document.getElementById('PAPER')
+const scissorsBtn = document.getElementById('SCISSORS')
+const scoreInfo = document.getElementById('scoreInfo')
+const playerScorePara = document.getElementById('playerScore')
+const computerScorePara = document.getElementById('computerScore')
 
-console.log(computerSelection)
-console.log(roundWinner)
+rockBtn.addEventListener('click', () => handleClick('ROCK'))
+paperBtn.addEventListener('click', () => handleClick('PAPER'))
+scissorsBtn.addEventListener('click', () => handleClick('SCISSORS'))
+
+function handleClick(playerSelection){
+  const computerSelection = getRandomChoice()
+  playRound(playerSelection,computerSelection)
+  updateScore()
+}
+
+function updateScore() {
+  if (roundWinner === 'tie') {
+    scoreInfo.textContent = "It's a tie!"  
+  } else if (roundWinner === 'player') {
+    scoreInfo.textContent = 'One point for Man!'
+  } else if (roundWinner === 'computer') {
+    scoreInfo.textContent = 'The Machines Inch Forward..'
+  }
+
+  playerScorePara.textContent = `Player: ${playerScore}`
+  computerScorePara.textContent = `Machine: ${computerScore}`
+}
